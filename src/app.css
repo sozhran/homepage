@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@import '@fontsource/fira-mono';
+
+:root {
+	--font-body:
+		Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--color-theme-1: #ff3e00;
+	--color-theme-2: #4075a6;
+	--color-text: theme(colors.stone.100);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	--horizontal-padding: 120px;
+	--vertical-padding: 40px;
+	font-family: var(--font-body);
+	color: var(--color-text);
+	--bg-color-body: theme(colors.neutral.700);
+	--bg-color-left-panel: theme(colors.gray.600);
+}
+
+html,
+body,
+.svelte,
+#svelte {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+h1,
+h2,
+p {
+	font-weight: 400;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-theme-1);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1rem;
+}
