@@ -17,8 +17,10 @@
 
 <style>
 	.projects {
-		display: grid;
-		grid-template-columns: auto auto;
+		display: flex;
+		flex-wrap: wrap;
+		/*grid-template-columns: auto auto;*/
 		padding: 20px;
+		gap: var(--standard-gap);
 	}
 </style>

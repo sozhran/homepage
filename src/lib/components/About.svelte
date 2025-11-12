@@ -9,12 +9,10 @@
 <style>
 	.about {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		gap: 10px;
-		background-color: darkgoldenrod;
-		height: 500px;
-		width: 300px;
 		border: 2px solid orange;
 	}
 

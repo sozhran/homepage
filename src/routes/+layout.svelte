@@ -13,21 +13,24 @@
 	</main>
 
 	<footer>
-		<p>footah</p>
+		<p>
+			© 2025 Artem Rasskazimov <a href="https://github.com/sozhran/homepage"
+				><img alt="github icon" src="/github.svg" width="20" height="20" /></a
+			>
+		</p>
 	</footer>
 </div>
 
 <style>
-	:global(html, body, #svelte) {
-		height: 100%;
-		margin: 0;
-	}
 	.app {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
 		margin: 0;
-		background-color: var(--bg-color-body);
+		gap: var(--standard-gap);
+		background-image: url('/wp1.png');
+		background-size: 2000px;
+		background-position: right top;
 	}
 
 	main {
@@ -39,19 +42,18 @@
 
 	footer {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
-		filter: brightness(1);
+		height: 45px;
+		background-color: var(--bg-dark-transparent);
 	}
 
-	footer::after {
-		display: block;
-		content: '';
-		width: 100%;
-		height: 100%;
-		opacity: 0.9;
-		background-color: #000000;
+	p {
+		opacity: 50%;
+		vertical-align: bottom;
+	}
+
+	img {
+		display: inline-block;
 	}
 </style>

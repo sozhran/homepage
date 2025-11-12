@@ -12,11 +12,14 @@
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	--horizontal-padding: 120px;
-	--vertical-padding: 40px;
+	--standard-gap: 45px;
 	font-family: var(--font-body);
 	color: var(--color-text);
 	--bg-color-body: theme(colors.neutral.700);
 	--bg-color-left-panel: theme(colors.gray.600);
+	--bg-color-right-panel: theme(colors.gray.600);
+	--bg-color-header: theme(colors.gray.500);
+	--bg-dark-transparent: rgba(0, 0, 0, 0.7);
 }
 
 html,
@@ -28,9 +31,16 @@ body,
 	height: 100%;
 }
 
+html {
+	scrollbar-gutter: stable both-edges;
+}
+
+body {
+	background-color: black;
+}
+
 h1,
-h2,
-p {
+h2 {
 	font-weight: 400;
 }
 
@@ -39,7 +49,7 @@ p {
 }
 
 a {
-	color: var(--color-theme-1);
+	color: var(--color-theme-2);
 	text-decoration: none;
 }
 
