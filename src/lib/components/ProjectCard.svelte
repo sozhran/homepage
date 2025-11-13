@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { ProjectProps } from '$lib/data/pagedata.svelte';
+	import type { ProjectProps } from '$lib/data/projects';
 
 	let { title, text, image_url, livedemo_url, github_url }: ProjectProps = $props();
 </script>
 
 <div class="project">
-	<span class="thumb"><img src={image_url} /></span>
-	<h2>{title}</h2>
+	<span class="thumb"><img alt={title} src={image_url} /></span>
+	<h3>{title}</h3>
 	<p>{@html text}</p>
 </div>
 

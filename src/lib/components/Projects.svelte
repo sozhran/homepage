@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { projects } from '$lib/data/pagedata.svelte';
+	import { projects } from '$lib/data/projects';
 	import ProjectCard from './ProjectCard.svelte';
 </script>
 

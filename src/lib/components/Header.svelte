@@ -1,52 +1,42 @@
 <script lang="ts">
-	import { page, changePage } from '$lib/stores/page';
+	function handleAnchorClick(e: MouseEvent) {
+		e.preventDefault();
+		const link = e.currentTarget as HTMLAnchorElement;
+		const anchorId = link.hash.replace('#', '');
+		const anchor = document.getElementById(anchorId);
+
+		if (anchor) {
+			anchor.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 </script>
 
 <header>
-	<div class="w-[300px] h-50px">Artem Rasskazimov</div>
-	<ul class="navigation">
-		<li>
-			<button
-				class="border-b-4 {$page === 'about' ? 'border-b-amber-700' : 'border-b-amber-600'}"
-				on:click={() => changePage('about')}>About me</button
-			>
-		</li>
-		<li>
-			<button class="border-b-4 border-b-amber-500" on:click={() => changePage('projects')}
-				>Projects</button
-			>
-		</li>
-		<li>
-			<button class="border-b-4 border-b-amber-400" on:click={() => changePage('cv')}>CV</button>
-		</li>
-	</ul>
+	<div class="w-[300px] h-50px">artem rasskazimov</div>
+	<nav>
+		<a href="#about" on:click={handleAnchorClick}>About me</a>
+		<a href="#projects" on:click={handleAnchorClick}>Projects</a>
+		<a href="#cv" on:click={handleAnchorClick}>CV</a>
+	</nav>
 </header>
 
 <style>
 	header {
+		/*position: fixed;*/
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		/*display: grid;*/
-		/*grid-template-columns: 300px auto 300px;*/
-		width: 100%;
-		/*background-image: url('$lib/images/foggy.png');*/
-		/*background-size: cover;*/
-		/*background-position: bottom;*/
-		opacity: 90%;
 		align-items: center;
 		font-size: xx-large;
-		height: 90px;
-		padding-left: var(--horizontal-padding);
-		padding-right: var(--horizontal-padding);
+		height: 60px;
 		color: var(--color-text);
-		background-color: var(--bg-dark-transparent);
 	}
 
-	header * {
-		color: inherit;
-	}
+	/*header > * {
+		width: 360px;
+	}*/
 
-	ul {
+	nav {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -55,19 +45,12 @@
 		gap: 30px;
 	}
 
-	li {
+	nav > a {
 		display: flex;
 		flex-direction: column;
 		width: 120px;
 		text-align: center;
-		vertical-align: middle;
-	}
-
-	button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 30px;
+		color: inherit;
 		font-weight: 700;
 		font-size: 0.8rem;
 		text-transform: uppercase;
@@ -76,7 +59,7 @@
 		transition: color 0.2s linear;
 	}
 
-	button:hover {
+	a:hover {
 		color: var(--color-theme-1);
 	}
 </style>

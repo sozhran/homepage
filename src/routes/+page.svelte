@@ -1,56 +1,43 @@
 <script lang="ts">
-	import LeftPanel from '$lib/components/LeftPanel.svelte';
 	import About from '$lib/components/About.svelte';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import CV from '$lib/components/CV.svelte';
-
-	import { page } from '$lib/stores/page';
+	import { projects } from '$lib/data/projects';
 </script>
 
 <svelte:head>
-	<title>Artem Rasskazimov: Personal page</title>
+	<title>Artem Rasskazimov | Software Developer</title>
 </svelte:head>
 
-<section>
-	<LeftPanel />
+<About />
 
-	<span class="separator"></span>
-
-	<div class="content">
-		{#if $page === 'projects'}
-			<Projects />
-		{:else if $page === 'cv'}
-			<CV />
-		{:else}
-			<About />
-		{/if}
-	</div>
+<section id="projects">
+	<h2>Projects</h2>
+	{#each projects as x}
+		<ProjectCard
+			title={x.title}
+			text={x.text}
+			image_url={x.image_url}
+			livedemo_url={x.livedemo_url}
+			github_url={x.github_url}
+		/>
+	{/each}
 </section>
 
 <style>
-	section {
-		display: flex;
-		color: var(----color-text);
-		gap: 50px;
-		padding-left: var(--horizontal-padding);
-		padding-right: var(--horizontal-padding);
-		width: 100%;
-	}
-
 	.content {
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
 		width: 100%;
 		padding: 20px;
-		background-color: var(--bg-dark-transparent);
 	}
 
-	.separator {
-		height: 410px;
-		width: 0px;
-		border: 1px solid grey;
-		margin-top: 45px;
-		margin-bottom: 45px;
+	.projects {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 20px;
+		gap: var(--standard-gap);
 	}
 </style>
