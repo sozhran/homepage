@@ -26,7 +26,7 @@
 
 	<span class="text">
 		<span class="flex flex-col items-start gap-1.5">
-			<h3>{title}</h3>
+			<h4>{title}</h4>
 			<p>{@html text}</p>
 		</span>
 		<div class="flex flex-row w-full flex-wrap gap-2">
@@ -41,11 +41,9 @@
 	.project {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		min-height: 400px;
-		min-width: 300px;
-		max-width: 350px;
-		/*gap: 10px;*/
+		min-height: 25rem;
+		min-width: 18.75rem;
+		max-width: 22rem;
 		color: var(--text-color);
 		background-color: rgb(51, 48, 48);
 		border: 2px solid rgb(63, 62, 60);
@@ -65,16 +63,10 @@
 		gap: 1rem;
 	}
 
-	h3 {
-		font-size: x-large;
-		font-weight: 600;
-		/*color: orange;*/
-	}
-
 	.techtag {
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		border: 1px solid grey;
-		padding: 6px;
+		padding: 0.5rem;
 		border-color: var(--border-tag);
 		border-radius: 0.5rem;
 		padding: 0.35rem;

@@ -24,7 +24,6 @@
 	.projects {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 		width: 100%;
 	}
@@ -32,8 +31,8 @@
 	.project-list {
 		display: grid;
 		grid-template-columns: auto auto auto;
-		padding: 20px;
-		margin-bottom: 30px;
+		padding: 1.25rem;
+		margin-bottom: 2rem;
 		gap: var(--standard-gap);
 	}
 </style>

@@ -18,6 +18,7 @@
 <style>
 	.app {
 		min-height: 100vh;
+		min-width: 800px;
 		gap: var(--standard-gap);
 		padding-left: var(--horizontal-padding);
 		padding-right: var(--horizontal-padding);
@@ -29,14 +30,14 @@
 		min-height: 0;
 		flex: 1;
 		background-color: var(--new-black);
-		gap: 20px;
+		gap: 1.25rem;
 	}
 
 	footer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 80px;
+		height: 5rem;
 		opacity: 30%;
 	}
 </style>

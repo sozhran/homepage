@@ -7,7 +7,7 @@
 <div class="stack-list">
 	{#each items as item}
 		<img
-			alt=""
+			alt={item.name}
 			src={`https://img.shields.io/badge/${item.name}-${item.badgeColor}.svg?style=for-the-badge&logo=${item.name}&logoColor=${item.textColor}`}
 		/>
 	{/each}
@@ -18,7 +18,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: 10px;
+		gap: 0.6rem;
 		opacity: 80%;
 	}
 </style>

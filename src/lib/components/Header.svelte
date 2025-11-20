@@ -22,13 +22,12 @@
 
 <style>
 	header {
-		/*position: fixed;*/
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		font-size: xx-large;
-		height: 60px;
+		height: 3.75rem;
 		color: var(--color-text);
 	}
 
@@ -38,13 +37,13 @@
 		align-items: center;
 		background: var(--background);
 		background-size: contain;
-		gap: 30px;
+		gap: 2rem;
 	}
 
-	nav > a {
+	a {
 		display: flex;
 		flex-direction: column;
-		width: 120px;
+		width: 7.5rem;
 		text-align: center;
 		color: inherit;
 		font-weight: 700;
@@ -56,6 +55,6 @@
 	}
 
 	a:hover {
-		color: var(--color-theme-1);
+		color: var(--nav-link-hover-color);
 	}
 </style>

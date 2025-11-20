@@ -4,20 +4,11 @@
 :root {
 	--new-black: #0e0e0e;
 	--font-body: 'Helvetica Neue', Arial, sans-serif;
-	--color-theme-1: #ff3e00;
-	--color-theme-2: #4075a6;
+	--nav-link-hover-color: #ff3e00;
 	--color-text: theme(colors.stone.100);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
 	--horizontal-padding: 120px;
 	--standard-gap: 45px;
-	font-family: var(--font-body);
-	color: var(--color-text);
 	--bg-color-body: theme(colors.neutral.700);
-	--bg-color-left-panel: theme(colors.gray.600);
-	--bg-color-right-panel: theme(colors.gray.600);
-	--bg-color-header: theme(colors.gray.500);
-	--bg-dark-transparent: rgba(0, 0, 0, 0.7);
 	--border-tag: theme(colors.neutral.500);
 }
 
@@ -37,21 +28,8 @@ html {
 body {
 	background-color: black;
 	min-width: 800px;
-}
-
-h1,
-h2,
-h3 {
-	font-weight: 400;
-}
-
-p {
-	line-height: 1.5;
-}
-
-a {
-	color: var(--color-theme-2);
-	text-decoration: none;
+	color: var(--color-text);
+	font-family: var(--font-body);
 }
 
 h1 {
@@ -66,6 +44,11 @@ h2 {
 h3 {
 	font-size: 2rem;
 	text-align: center;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 600;
 }
 
 svg {

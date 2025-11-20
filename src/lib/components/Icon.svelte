@@ -12,8 +12,8 @@
 		class="svgicon"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 512 512"
-		width="40"
-		height="40"
+		width="2.5rem"
+		height="2.5rem"
 	>
 		<path d={path}></path></svg
 	>
