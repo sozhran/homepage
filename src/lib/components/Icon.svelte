@@ -1,13 +1,20 @@
 <script lang="ts">
-	let { path, size }: { path: string; size: string } = $props();
+	type Props = {
+		title: string;
+		path: string;
+		url: string;
+	};
+	let { title, path, url }: Props = $props();
 </script>
 
-<svg
-	class="svgicon"
-	xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 512 512"
-	width={size}
-	height={size}
->
-	<path d={path}></path></svg
->
+<a {title} href={url}>
+	<svg
+		class="svgicon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 512 512"
+		width="40"
+		height="40"
+	>
+		<path d={path}></path></svg
+	>
+</a>

@@ -29,6 +29,7 @@
 		min-height: 0;
 		flex: 1;
 		background-color: var(--new-black);
+		gap: 20px;
 	}
 
 	footer {

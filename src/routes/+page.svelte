@@ -1,8 +1,6 @@
 <script lang="ts">
-	import About from '$lib/components/About.svelte';
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
-	import Projects from '$lib/components/Projects.svelte';
-	import { projects } from '$lib/data/projects';
+	import About from '$lib/components/SectionAbout.svelte';
+	import Projects from '$lib/components/SectionProjects.svelte';
 </script>
 
 <svelte:head>
@@ -11,18 +9,7 @@
 
 <About />
 
-<section id="projects">
-	<h2>Projects</h2>
-	{#each projects as x}
-		<ProjectCard
-			title={x.title}
-			text={x.text}
-			image_url={x.image_url}
-			livedemo_url={x.livedemo_url}
-			github_url={x.github_url}
-		/>
-	{/each}
-</section>
+<Projects />
 
 <style>
 	.content {

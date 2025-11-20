@@ -16,7 +16,7 @@
 	<nav>
 		<a href="#about" on:click={handleAnchorClick}>About me</a>
 		<a href="#projects" on:click={handleAnchorClick}>Projects</a>
-		<a href="#cv" on:click={handleAnchorClick}>CV</a>
+		<a href="/cv.pdf" data-sveltekit-preload-data="hover" target="_blank" rel="noopener">CV</a>
 	</nav>
 </header>
 
@@ -31,10 +31,6 @@
 		height: 60px;
 		color: var(--color-text);
 	}
-
-	/*header > * {
-		width: 360px;
-	}*/
 
 	nav {
 		display: flex;
